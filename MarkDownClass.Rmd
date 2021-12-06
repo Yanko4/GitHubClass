@@ -1,0 +1,75 @@
+---
+title: "Markdown Class"
+author: "Yanko"
+date: "12/6/2021"
+output: 
+  html_document:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r echo=FALSE}
+klippy::klippy()
+```
+
+
+
+# Level 1 Header
+
+## Subheader
+
+###### subest of headers
+
+horizontal line
+
+------------------------------------------------------------------------
+
+## Text Formatting
+
+*italic*
+
+**bold**
+
+~~strikethrough~~
+
+superscript^2^
+
+[google](https://www.google.com)
+
+[underlined]{.ul}
+
+subscript~2~
+
+| column 1 | column 2 | column 3 |
+|:---------|:--------:|---------:|
+| value 1  | value 2  |  value 3 |
+
+| Col1 | Col2 | Col3 |
+|------|:----:|------|
+| 1    |  2   | 3    |
+| 2    |  4   | 5    |
+| 3    |  8   | 9    |
+
+: The Best Table Ever
+
+This is the formula $y=mx+b^2$.
+
+See the equation below $$y=mx+b^2$$
+
+Code chunk.
+
+ctrl+alt+i
+
+```{r histogram, message=FALSE, warning=FALSE}
+# comment: here we are going to make a plot
+library("tidyverse")
+library("palmerpenguins")
+data("penguins")
+
+penguins %>% ggplot(aes(x=flipper_length_mm))+geom_histogram()
+```
+
